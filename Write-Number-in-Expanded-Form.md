@@ -10,13 +10,13 @@ NOTE: All numbers will be whole numbers greater than 0.
 
 ## Answer
 **My Solution**
-'''
+```
 def expanded_form(num):
     return " + ".join([(str(num)[x] + "0" * (len(str(num)) - 1 - x)) for x in range(len(list(str(num)))) if str(num)[x] != "0"])
-'''
+```
 **Best Solutions**
-'''
+```
 def expanded_form(num):
     num = list(str(num))
     return ' + '.join(x + '0' * (len(num) - y - 1) for y,x in enumerate(num) if x != '0')
-'''
+```
